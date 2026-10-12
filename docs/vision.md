@@ -113,5 +113,4 @@ Use case by use case: each stage makes one of the [use cases](use-cases.md) work
 real people, proved on real hardware, and leaves something that works.
 The current state and the next stages are in [fit-and-roadmap](fit-and-roadmap.md);
 the design is in [architecture](architecture.md); the first full device family is
-[Stackchan](implementations/stackchan.md); new device and app ideas live in
-[i41eu-ideas](https://github.com/i41-eu/i41eu-ideas).
+[Stackchan](implementations/stackchan.md).

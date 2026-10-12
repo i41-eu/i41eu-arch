@@ -57,10 +57,6 @@ of them, and loops and controllers that AI helps you write and you approve.
 8. [Fit and roadmap](docs/fit-and-roadmap.md): how the existing repos fit, the gaps,
    and the next stages.
 
-Ideas for devices, adapters and loops (old phones, a Roomba, lawn mowers, Home
-Assistant, a private GPS app, cameras and plate OCR, Wi-Fi presence, calendars,
-NFC and QR) are in [i41eu-ideas](https://github.com/i41-eu/i41eu-ideas).
-
 ## The repos today
 
 Each repo is independent. A home is made of the repos its user includes.
@@ -74,7 +70,6 @@ Each repo is independent. A home is made of the repos its user includes.
 | [q41eu-focus](https://github.com/i41-eu/q41eu-focus) | Focus, a focus timer for your desk: the robot is the timer, a phone optional, at `focus.q41.eu` | Apache-2.0 |
 | [q41eu-sbot](https://github.com/i41-eu/q41eu-sbot) | grows into the home node: web/API server, event hub, controller server; the cockpit app | Apache-2.0 |
 | [tpbot-ble](https://github.com/i41-eu/i41eu-tpbot-ble) | micro:bit firmware for the TPBot car, laptop tool and bridge | Apache-2.0 |
-| [i41eu-ideas](https://github.com/i41-eu/i41eu-ideas) | ideas for devices, adapters, apps and loops | Apache-2.0 |
 | [mj41cz-approved](https://gitlab.com/mj41cz/mj41cz-approved) | the signed hashes of each release, per builder, and the tool that checks them ([device setup](docs/device-setup.md) §6.2) | Apache-2.0 |
 | [mj41cz-rebuilds](https://gitlab.com/mj41cz/mj41cz-rebuilds) | independent rebuilds of releases on short-lived cloud machines, with a signed audit log ([independent rebuild](docs/independent-rebuild.md)) | Apache-2.0 |
 

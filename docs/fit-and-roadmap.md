@@ -70,8 +70,6 @@ work for real people, leaves a working system, and is proved on our own hardware
 Running alongside: [device setup](device-setup.md) §7, [end-to-end encryption](e2ee.md),
 [accounts](accounts.md), [independent rebuild](independent-rebuild.md).
 
-Ideas that are not on the roadmap yet live in [i41eu-ideas](https://github.com/i41-eu/i41eu-ideas).
-
 ## 4. Where it stands
 
 The POCs fit the **device side** well (light clients, raw data, optional extensions, safety
