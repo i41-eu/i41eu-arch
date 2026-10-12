@@ -7,7 +7,7 @@ compatibility (principle 27): devices and servers are updated together, and ever
 listed with its date in §10. §9 collects the bigger changes already planned.
 
 v1 is what the home's servers speak today. The `wire` package in [q41eu-raw](https://github.com/i41-eu/q41eu-raw)
-implements it in Go, and Stackchan's [Embody Mode](https://github.com/i41-eu/i41eu-embody/tree/main), `tpbot-bridge`
+implements it in Go, and Stackchan's [Embody Mode](https://github.com/i41-eu/i41eu-StackChan/tree/embody), `tpbot-bridge`
 ([tpbot-ble](https://github.com/i41-eu/i41eu-tpbot-ble)), [q41eu-sbot](https://github.com/i41-eu/q41eu-sbot) and [q41eu-pet](https://github.com/i41-eu/q41eu-pet) all use it. Per-device command catalogs live with each device
 family (see §8).
 

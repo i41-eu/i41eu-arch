@@ -41,7 +41,7 @@ the node on the LAN, and the node dials the relay. Nothing at home needs an open
 the node directly, and some devices never use `i41.eu` at all (§10).
 
 **One home, many repos.** A home is made of the repos its user includes: the node
-(growing out of [q41eu-sbot](https://github.com/i41-eu/q41eu-sbot)), device firmware (the [StackChan fork](https://github.com/i41-eu/i41eu-embody/tree/main),
+(growing out of [q41eu-sbot](https://github.com/i41-eu/q41eu-sbot)), device firmware (the [StackChan fork](https://github.com/i41-eu/i41eu-StackChan/tree/embody),
 [tpbot-ble](https://github.com/i41-eu/i41eu-tpbot-ble)), and app repos that stay separate but join the home when
 included ([q41eu-pet](https://github.com/i41-eu/q41eu-pet), the [q41eu-raw](https://github.com/i41-eu/q41eu-raw)
 dashboard). All the repos: [The repos today](../README.md#the-repos-today). Each repo is independent; they meet at the

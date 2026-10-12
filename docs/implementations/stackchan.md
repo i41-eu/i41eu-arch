@@ -11,7 +11,7 @@ Setting up a robot: plug it in and press one button on
 [m.i41.eu/setup](https://m.i41.eu/setup) (Chrome, USB), the Stackchan manager (at home:
 [i41eu-manager](https://github.com/i41-eu/i41eu-manager)); it gives the robot the apps you
 approve, each with a token of its own. With your own server or your own build:
-[SETUP.md](https://github.com/i41-eu/i41eu-embody/blob/main/firmware/main/apps/app_embody_mode/SETUP.md)
+[SETUP.md](https://github.com/i41-eu/i41eu-StackChan/blob/embody/firmware/main/apps/app_embody_mode/SETUP.md)
 in the firmware fork.
 
 ## The device
@@ -30,11 +30,11 @@ in the firmware fork.
 | Power (AXP2101, INA226) | voltages, currents, plug and button events |
 | BLE (NimBLE central) | hosts other devices: the TPBot car today |
 
-Details and coverage: [HARDWARE.md](https://github.com/i41-eu/i41eu-embody/blob/main/firmware/main/apps/app_embody_mode/HARDWARE.md) in the firmware fork; how it works, by example: [Stackchan concept](stackchan-concept.md).
+Details and coverage: [HARDWARE.md](https://github.com/i41-eu/i41eu-StackChan/blob/embody/firmware/main/apps/app_embody_mode/HARDWARE.md) in the firmware fork; how it works, by example: [Stackchan concept](stackchan-concept.md).
 
 ## The firmware: Embody Mode as a light client
 
-[i41eu-embody](https://github.com/i41-eu/i41eu-embody), [M5Stack's firmware](https://github.com/m5stack/StackChan) with our changes, adds **Embody
+[i41eu-StackChan](https://github.com/i41-eu/i41eu-StackChan), [M5Stack's firmware](https://github.com/m5stack/StackChan) with our changes, adds **Embody
 Mode**, the first launcher app. It:
 
 - connects out to a server over WebSocket and registers its capabilities (the

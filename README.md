@@ -67,7 +67,7 @@ Each repo is independent. A home is made of the repos its user includes.
 
 | Repo | Role | License |
 |---|---|---|
-| [i41eu-embody](https://github.com/i41-eu/i41eu-embody) | M5Stack's StackChan firmware with Embody Mode, a light client; how to set up a robot: [SETUP.md](https://github.com/i41-eu/i41eu-embody/blob/main/firmware/main/apps/app_embody_mode/SETUP.md) | MIT (the firmware, as upstream) |
+| [i41eu-StackChan](https://github.com/i41-eu/i41eu-StackChan) | M5Stack's StackChan firmware with Embody Mode, a light client; how to set up a robot: [SETUP.md](https://github.com/i41-eu/i41eu-StackChan/blob/embody/firmware/main/apps/app_embody_mode/SETUP.md) | MIT (the firmware, as upstream) |
 | [i41eu-manager](https://github.com/i41-eu/i41eu-manager) | the home manager (optional), on your computer at home, and can link up to the online manager at `m.i41.eu`: your robots, the apps you approve, one-click setup over USB, a token per robot per app | MIT |
 | [q41eu-raw](https://github.com/i41-eu/q41eu-raw) | Go implementation of the wire protocol (`wire` package), Raw data (every sensor and command, and the relay) at `raw.q41.eu`, the `robotauth` package the apps share | MIT |
 | [q41eu-pet](https://github.com/i41-eu/q41eu-pet) | the pet app (a Tamagotchi for kids), at `pet.q41.eu` | MIT |
@@ -84,7 +84,7 @@ How they fit together and what comes next: [Fit and roadmap](docs/fit-and-roadma
 
 | Piece | What it is | Needed? |
 |---|---|---|
-| **Robot** | a Stackchan with the [Embody Mode firmware](https://github.com/i41-eu/i41eu-embody/tree/main/firmware/main/apps/app_embody_mode). On its screen the **app switcher** (the QR screen: Next, Connect) lists its apps and switches between them; its gear opens the **Manager screen** (which manager it has, turn it off or on). | yes |
+| **Robot** | a Stackchan with the [Embody Mode firmware](https://github.com/i41-eu/i41eu-StackChan/tree/embody/firmware/main/apps/app_embody_mode). On its screen the **app switcher** (the QR screen: Next, Connect) lists its apps and switches between them; its gear opens the **Manager screen** (which manager it has, turn it off or on). | yes |
 | **Apps** | servers the robot connects to, one at a time: [Raw data](https://github.com/i41-eu/q41eu-raw), [Pet](https://github.com/i41-eu/q41eu-pet), [Sbot](https://github.com/i41-eu/q41eu-sbot), [Focus](https://github.com/i41-eu/q41eu-focus), … | at least one |
 | **Phone or browser** | opens an app's page and pairs with the robot by scanning its QR code; with end-to-end encryption only paired browsers can read the robot | to use an app |
 | **Manager** | [i41eu-manager](https://github.com/i41-eu/i41eu-manager): the web service that sets robots up over USB, gives each robot its own token per app, and switches and changes apps from its page; on your own computer (the home manager) or online at [m.i41.eu](https://m.i41.eu), which a home manager may link to | optional: without it, apps are written over USB and switched on the robot's app switcher |

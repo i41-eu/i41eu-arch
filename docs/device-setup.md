@@ -127,7 +127,7 @@ The connect page (3.4) can include the flasher (3.2), so a new robot still needs
   SHA-256 of its module (`-flasher https://…/embody-v0.2.0/flasher.js#sha256=…`). The page
   loads the module with subresource integrity, and the module loads its firmware from its own
   origin. The server serves neither the installer nor the firmware.
-- The page **shows** what it would install: "Embody Mode v0.2.0, from github.com/i41-eu/i41eu-embody
+- The page **shows** what it would install: "Embody Mode v0.2.0, from github.com/i41-eu/i41eu-StackChan
   (release, checksums)", and installs only after the person **allows** it: the button reads
   "Install Embody Mode and connect". A robot that already has Embody Mode skips it.
 - Without `-flasher`, or if the person declines, the page links to the standalone flasher
@@ -205,7 +205,7 @@ release unnoticed:
   attestations (`actions/attest-build-provenance`) sign each file with a short-lived Sigstore
   certificate bound to the workflow, the repo and the commit, and record it in **Rekor**,
   Sigstore's public transparency log, with its time. Its Rekor URL would go into `ci/source`;
-  checked with `gh attestation verify <file> --repo i41-eu/i41eu-embody`.
+  checked with `gh attestation verify <file> --repo i41-eu/i41eu-StackChan`.
 
 ### 6.4 Reproducible builds
 

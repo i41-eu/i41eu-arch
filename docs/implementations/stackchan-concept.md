@@ -117,6 +117,6 @@ command, and small loops react (the robot looks sad while its car is blocked).
 - **Safety close to the hardware.** The car stops on its own 500 ms after the last command;
   the robot stops the car when its server connection drops.
 
-Set a robot up: [SETUP.md](https://github.com/i41-eu/i41eu-embody/blob/main/firmware/main/apps/app_embody_mode/SETUP.md).
+Set a robot up: [SETUP.md](https://github.com/i41-eu/i41eu-StackChan/blob/embody/firmware/main/apps/app_embody_mode/SETUP.md).
 The screenshots are the robot's own screen (`screen_snapshot`) and the apps' pages, taken
 on 2026-10-03 with the camera off; ids and addresses are placeholders.
