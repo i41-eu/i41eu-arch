@@ -247,6 +247,7 @@ Each item: what, where, why it matters, and what would fix it.
 
 | Date | What was wrong | Where | Fixed in |
 |---|---|---|---|
+| 2026-10-13 | A phone's session id was the one its browser came with, so an id set beforehand by someone else could become a sign-in; now the manager makes the id when the phone signs in | the home manager | [i41eu-manager](https://github.com/i41-eu/i41eu-manager) v0.1.3 |
 | 2026-10-13 | A phone signed in at a robot could set robots up again (getting their tokens) and start, change or end the home's link to m.i41.eu; now only the page on the computer the manager runs on can | the home manager | [i41eu-manager](https://github.com/i41-eu/i41eu-manager) v0.1.1 |
 | 2026-10-13 | The home manager gave the computer's Wi-Fi password to phones signed in at a robot; now only the page on the computer itself gets it | the home manager | [i41eu-manager](https://github.com/i41-eu/i41eu-manager) v0.1.0. m.i41.eu was not affected |
 
