@@ -9,7 +9,8 @@ of them, and loops and controllers that AI helps you write and you approve.
 > **Design drafts and proofs of concept, vibe coded.** Written with AI agents. The code in the
 > repos below is tested on real hardware at home, but neither the code nor its security has
 > been reviewed by humans. Use it on your own network, and don't trust it with anything
-> private yet.
+> private yet. What we aim for, the known backlog and how to report a problem:
+> [security](docs/security.md).
 >
 > **Early stage: no backward compatibility.** Protocols, APIs, file formats and stored settings
 > change when something better comes along, without migrations: update the robot's firmware
@@ -26,10 +27,13 @@ of them, and loops and controllers that AI helps you write and you approve.
      (the owner, the kids, family far away, guests, AI agents, loops, the relay…), what
      matters first to each and what each may do.
 3. [Principles](docs/principles.md): the binding rules.
-4. [Architecture](docs/architecture.md): home node (web/API server, controller
+4. [Security](docs/security.md): what you can do now, what we aim for, that nothing is
+   independently reviewed yet, the known backlog and what was fixed, and how to report a problem
+   privately.
+5. [Architecture](docs/architecture.md): home node (web/API server, controller
    server, event hub), light clients, adapters, apps, loops, AI agents, trust and
    access control, relay.
-5. [Device wire protocol](docs/wire-protocol.md): the reference for how devices,
+6. [Device wire protocol](docs/wire-protocol.md): the reference for how devices,
    adapters and agents connect.
    - [End-to-end encryption](docs/e2ee.md): a device and its enrolled browsers, through a
      relay that carries only ciphertext.
@@ -41,7 +45,7 @@ of them, and loops and controllers that AI helps you write and you approve.
      per app, shared by the home's servers.
    - [Device storage](docs/device-storage.md): per-app folders under one root
      (`/user/embody`, and `/sdcard/embody` with a microSD card), uninstall and remove-all.
-6. **i41.eu services and releases:**
+7. **i41.eu services and releases:**
    - [Stackchan sites](docs/stackchan-sites.md): m.i41.eu (the manager: robots, the apps
      you approve, setup) and one host per app (`raw.q41.eu`, `pet.q41.eu`, …).
      Deployed 2026-10-04.
@@ -52,9 +56,9 @@ of them, and loops and controllers that AI helps you write and you approve.
    - [Independent rebuild](docs/independent-rebuild.md): a third verification of releases on
      a short-lived cloud VM: Espressif's toolchain built from source with Guix host
      tools, a certified key of its own, a signed audit log.
-7. [Stackchan](docs/implementations/stackchan.md): the first device family, with
+8. [Stackchan](docs/implementations/stackchan.md): the first device family, with
    its apps and the TPBot car.
-8. [Fit and roadmap](docs/fit-and-roadmap.md): how the existing repos fit, the gaps,
+9. [Fit and roadmap](docs/fit-and-roadmap.md): how the existing repos fit, the gaps,
    and the next stages.
 
 ## The repos today

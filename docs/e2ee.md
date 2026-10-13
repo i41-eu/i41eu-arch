@@ -16,7 +16,7 @@ or drive.
 
 ## 1. Threat model
 
-| The relay (server) can | It cannot |
+| The relay (server) can | It is designed so that it cannot |
 |---|---|
 | see that a robot is online, when, from where, and how much it sends | read camera frames, audio, telemetry, events or commands |
 | drop, delay or reorder messages | inject a command the robot accepts, or replay one |
@@ -25,6 +25,9 @@ or drive.
 
 Out of scope: a compromised robot or browser device; someone who photographs the robot's
 QR code (they can enroll, as they can pair today: physical access is the boundary).
+
+This is the design. It has not been reviewed yet, and exploitable bugs stay private until a fix
+is released; its known limits today: [security](security.md) §4.7.
 
 ## 2. Keys
 

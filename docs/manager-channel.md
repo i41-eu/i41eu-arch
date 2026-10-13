@@ -306,6 +306,9 @@ screen, downloads, checks, installs, reports. Designed separately.
 
 ## 6. Trust and privacy
 
+This is the design. It has not been reviewed yet, and exploitable bugs stay private until a fix
+is released; the known limits today: [security](security.md).
+
 - **The robot trusts only its primary's key** (principle 3: the home is the root of trust).
   m.i41.eu never signs for a home's robot. As a read-only shadow, a compromised m.i41.eu can
   show wrong states and refuse tokens for its own apps (denial of service), nothing more
@@ -315,7 +318,8 @@ screen, downloads, checks, installs, reports. Designed separately.
 - **The home's local address** goes to m.i41.eu only if the owner shares it (S3); otherwise
   only the robot's Manager screen shows it.
 - **The channel's connection itself is not trusted:** what changes the robot is signed. A plain
-  `ws://` on the home LAN is fine for that; a listener there sees the robot's state.
+  `ws://` on the home LAN is fine for what is signed, but a listener there also sees the robot's
+  tokens and the Manager screen's one-time sign-in code: see [security](security.md) §4.5.
 - **What m.i41.eu learns of a linked home:** its robots' names, which app each runs (by name),
   their state. Not the home's app URLs (apps go up as `{id, name}`), not tokens of home apps.
 - **Later:** the shadow can become a blind relay to the home manager's own page
