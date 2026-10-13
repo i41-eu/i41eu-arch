@@ -69,6 +69,12 @@ own, next to the part commands, and say so in their descriptor ("motion", "safet
 on the device"). Everything that only needs meaning (when to nod, what a reading means) is on
 the node, in apps and loops.
 
+**Signs:** a positive yaw (`look`'s `yaw_deg`, the `yaw` servo's `angle_deg`, `head_yaw_deg`)
+turns the head to the robot's own left, counter-clockwise seen from above, and a positive
+velocity (`rotate`, `velocity_pct`) turns it the same way; negative is the robot's right. This
+is M5Stack's sign for StackChan (its docs: `moveX(900)` is "Turn Left"), kept unchanged by the
+firmware ([wire protocol](wire-protocol.md) §7).
+
 ## 4. From today's names
 
 | Today | Proposed |

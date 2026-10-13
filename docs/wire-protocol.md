@@ -137,6 +137,12 @@ New types are added here first. `0x80`–`0xFF` are free for experiments.
   (`camera`, `mic`, `*_stream` commands) while someone watches, and off after. These
   commands come from the server, never from a browser directly.
 - **Names:** `snake_case`; units in the name (`_pct`, `_deg`, `_us`, `_mv`).
+- **Left and right are the device's own.** A positive yaw (`look`'s `yaw`, the
+  `head_yaw_deg` measurement) turns the head to the robot's own left, counter-clockwise
+  seen from above; a negative one to its right. A positive `rotate` velocity turns the
+  same way. This is M5Stack's sign for StackChan (its docs: `moveX(900)` is "Turn Left"),
+  and the firmware passes it to the servo unchanged. A UI places its controls the way the
+  robot's camera sees: a control on the right turns the robot to its right.
 - **Extensions** use a prefix (`car_*`) and an `*_enable` command that makes the
   device register again with the extension's commands.
 - **Safety:** a device that moves stops on its own when commands stop coming (a
