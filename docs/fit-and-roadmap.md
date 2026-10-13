@@ -78,9 +78,9 @@ keeps the safety stop; the controller server runs loops with replay / shadow / l
 grants (none by default), and `frown` is live. Online, the manager (m.i41.eu) has sign-in,
 one-click setup and a token per robot per app; its apps are the raw dashboard (raw.q41.eu:
 private robots, tiers, end-to-end encryption available) and the pet (pet.q41.eu);
-releases are reproducible and approved in `mj41cz-approved`. Since 2026-10-06 each robot keeps
-a live, signed connection to its one manager, and a home manager links up to m.i41.eu
-([the robot's manager](manager-channel.md)).
+releases are reproducible, and the owner signs their hashes in `mj41cz-approved`. Since
+2026-10-06 each robot keeps a live, signed connection to its one manager, and a home manager
+links up to m.i41.eu ([the robot's manager](manager-channel.md)).
 
 Still open against the [principles](principles.md) and the [architecture](architecture.md):
 

@@ -6,10 +6,10 @@ Status: **draft for review**. What exists is under "Today"; the rest is the plan
 ## Today
 
 - **Connection:** Embody Mode connects to [q41eu-raw](https://github.com/i41-eu/q41eu-raw) (or another app server) with a bearer token. Browsers pair by scanning the robot's QR code.
-- **Tokens:** the release firmware ([embody-v0.1.0](https://github.com/i41-eu/i41eu-StackChan/releases/tag/embody-v0.1.0)) has no server or token: they are written into NVS over USB at setup. On i41.eu the manager (m.i41.eu, or a home's own [i41eu-manager](https://github.com/i41-eu/i41eu-manager)) gives each robot a token of its own per app (an account adds the robot; the manager keeps only the token's hash), and each app checks it with the manager. A home server's own robots still share one token.
+- **Tokens:** the release firmware ([the latest release](https://github.com/i41-eu/i41eu-StackChan/releases/latest)) has no server or token: they are written into NVS over USB at setup. On i41.eu the manager (m.i41.eu, or a home's own [i41eu-manager](https://github.com/i41-eu/i41eu-manager)) gives each robot a token of its own per app (an account adds the robot; the manager keeps only the token's hash), and each app checks it with the manager. A home server's own robots still share one token.
 - **People:** m.i41.eu and raw.q41.eu sign people in through Dex (GitHub, Google); a robot belongs to the account that added it and is private to it by default. Tiers set rate limits, not access.
 - **End-to-end encryption** per server: with it on, the relay carries only ciphertext ([e2ee](https://github.com/i41-eu/i41eu-arch/blob/main/docs/e2ee.md)).
-- **Releases:** reproducible (CI, the owner's laptop and a cloud rebuild give the same bytes), approved by the owner's signed hashes ([mj41cz-approved](https://gitlab.com/mj41cz/mj41cz-approved)).
+- **Releases:** reproducible (CI and the owner's laptop give the same bytes; a cloud rebuild with a compiler built from source did too, up to embody-v0.5.5), approved by the owner's signed hashes ([mj41cz-approved](https://gitlab.com/mj41cz/mj41cz-approved)) after they are published; anyone can check one ([Verify a release](https://github.com/i41-eu/i41eu-StackChan/blob/embody/firmware/main/apps/app_embody_mode/README.md#verify-a-release)). The managers install the latest release without checking that signature yet.
 - **Firmware update path:** the xiaozhi OTA server check is disabled, and firmware is never installed from a server. See "Firmware work" below.
 - **Problem:** anyone who dumps a robot's flash gets its token and can act as that robot. There are no scopes yet: every paired browser can use every capability, including camera and microphone (the robot shows a LIVE badge while they stream).
 
@@ -191,7 +191,7 @@ guests:                        # QR on the robot, no login
    - **No auto-install:** even with the check on, firmware the server offers is never installed.
    - **MCP tool removed:** `self.upgrade_firmware`, which installed firmware from any URL, is gone.
    - **Future update path:** only images whose hash is in an owner-signed manifest.
-2. **Reproducible builds.** Done: `CONFIG_APP_REPRODUCIBLE_BUILD=y` in release builds, ESP-IDF 5.5.4 pinned in a container, dependencies pinned by commit; three independent builds give the same bytes ([device setup](https://github.com/i41-eu/i41eu-arch/blob/main/docs/device-setup.md) §6).
+2. **Reproducible builds.** Done: `CONFIG_APP_REPRODUCIBLE_BUILD=y` in release builds, ESP-IDF 5.5.4 pinned in a container, dependencies pinned by commit; builds on three kinds of machine (GitHub Actions, the owner's laptop, a short-lived cloud machine with a compiler built from source) give the same bytes, all run by the owner so far ([device setup](https://github.com/i41-eu/i41eu-arch/blob/main/docs/device-setup.md) §6).
 3. **Provisioning partition:** add it to `partitions.csv`, with a reader and a signature verifier (mbedTLS ECDSA P-256).
 4. **Device key and challenge-response** in `embody_client`. Replace the shared token.
 5. **Owner-CA TLS for the LAN.** Today xiaozhi's `EspSsl` only uses the public CA bundle. Add a custom CA option and a DS client certificate.

@@ -244,8 +244,10 @@ their numbers in [Personas and agents](personas.md); the programs that serve eac
 - **Private:** no server, token or Wi-Fi inside the firmware; robots private to their owner by
   default; end-to-end encryption available.
 - **Status:** works at m.i41.eu/setup and with a manager at home; releases are rebuilt and
-  approved in mj41cz-approved. Planned: the flasher as its own page, and the owner's approval
-  before a release is published.
+  approved in mj41cz-approved, and anyone can check one
+  ([Verify a release](https://github.com/i41-eu/i41eu-StackChan/blob/embody/firmware/main/apps/app_embody_mode/README.md#verify-a-release)), but the setup page
+  does not check that approval yet. Planned: the flasher as its own page, and the owner's
+  approval before a release is published.
 
 ---
 

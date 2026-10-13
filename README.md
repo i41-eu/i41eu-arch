@@ -103,9 +103,12 @@ Design draft with working proofs of concept, 2026-10-12:
   control); the manager is optional, and switching is always possible on the robot. The apps:
   Raw data at `raw.q41.eu` (robots private by default, end-to-end encryption), Pet at
   `pet.q41.eu` and Focus at `focus.q41.eu`. `s.i41.eu` is the index, with a page per app.
-- **Firmware `embody-v0.5.6`** released, built to the same bytes by GitHub Actions and the
-  owner's laptop; `embody-v0.5.5` also by a cloud rebuild, and signed by the owner, in
-  [mj41cz-approved](https://gitlab.com/mj41cz/mj41cz-approved).
+- **Firmware `embody-v0.6.0`** released from
+  [i41eu-StackChan](https://github.com/i41-eu/i41eu-StackChan/releases), built to the same bytes
+  by GitHub Actions and the owner's laptop, its `SHA256SUMS` signed by the owner in
+  [mj41cz-approved](https://gitlab.com/mj41cz/mj41cz-approved); the last cloud rebuild,
+  `embody-v0.5.5`, gave the same bytes too. To check a release yourself:
+  [Verify a release](https://github.com/i41-eu/i41eu-StackChan/blob/embody/firmware/main/apps/app_embody_mode/README.md#verify-a-release).
 
 What comes next: [Fit and roadmap](docs/fit-and-roadmap.md).
 

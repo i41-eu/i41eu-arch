@@ -57,8 +57,9 @@ release holds the parts, `manifest.json` with their SHA-256, one merged image an
 `SHA256SUMS` (planned: the flasher page). No server, token or Wi-Fi is ever inside: those are
 the robot's settings.
 
-Every release is rebuilt by independent builders who sign its hashes in a public repository,
-the build is reproducible, and the owner approves it (planned: before it is published): §6.
+The build is reproducible. The owner rebuilds each release of i41-eu/i41eu-StackChan and signs
+its hashes in a public repository, where other builders can add theirs, and so approves it
+(today after it is published; planned: before): §6.
 
 ### 3.2 Flasher
 
@@ -188,8 +189,16 @@ Layout and tool: [mj41cz-approved](https://gitlab.com/mj41cz/mj41cz-approved) (i
   release, so a browser can check it with WebCrypto where the key comes from elsewhere (the
   connect page on m.i41.eu, §4; later the robot itself).
 - **The rule:** a release is approved when the owner's signed `SHA256SUMS` equals CI's and
-  every other builder's (today: ci, mj41, cloud). Later: CI's Sigstore attestation too, and
-  at least one builder besides mj41's own machines.
+  every other builder's (so far: ci, mj41, and cloud up to embody-v0.5.5). Later: CI's
+  Sigstore attestation too, and at least one builder besides mj41's own machines.
+- **The record so far:** in every release in mj41cz-approved, all builders got the same bytes. The
+  owner signed embody-v0.6.0, the first release from i41-eu/i41eu-StackChan; of the earlier
+  releases (from mj41/StackChan), embody-v0.4.0, v0.5.3 and v0.5.6 were rebuilt but not signed,
+  and v0.5.7 to v0.5.12 are not recorded. The signature is not on the GitHub release yet, and
+  the managers do not check it before installing.
+- **How anyone checks a release,** step by step (the hashes, the owner's signature with the key
+  also at github.com/mj41.keys, the timestamp, a rebuild):
+  [Verify a release](https://github.com/i41-eu/i41eu-StackChan/blob/embody/firmware/main/apps/app_embody_mode/README.md#verify-a-release).
 
 ### 6.3 Timestamps by third parties
 
@@ -212,7 +221,7 @@ release unnoticed:
 The strongest check is an independent rebuild that gives the same bytes: then the owner does
 not have to trust CI at all. A release build gives the same bytes for all seven published
 files (the five parts, `manifest.json`, the merged image) on GitHub Actions, on the owner's
-laptop and on a cloud machine.
+laptop and, up to embody-v0.5.5, on a cloud machine.
 
 | | State |
 |---|---|

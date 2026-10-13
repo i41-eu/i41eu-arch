@@ -1,7 +1,8 @@
 # Independent rebuild: a third verification, in the cloud, with its own key
 
 **Status:** 2026-10-04, implemented in [mj41cz-rebuilds](https://gitlab.com/mj41cz/mj41cz-rebuilds);
-first release run 2026-10-04 (`embody-v0.1.0`, identical bytes). Part of the release hardening
+first release run 2026-10-04 (`embody-v0.1.0`, identical bytes), the last 2026-10-07
+(`embody-v0.5.5`, identical bytes); not run yet for a later release. Part of the release hardening
 in [Device setup](device-setup.md) §6. GitHub Actions builds a release, and the owner's laptop
 rebuilds it (with Espressif's compiler, with our own compiler, and with Guix's host tools: the
 same bytes). This adds a third verification: a short-lived cloud machine that builds
@@ -16,7 +17,9 @@ kept for the next runs.
 - **Its own toolchain:** the machine builds Espressif's toolchain from source
   (`firmware/toolchain/`) with Guix's host tools, then the firmware, and compares the bytes with
   the release's.
-- **Reproducible by anyone:** the same tool, the same pinned Guix channel, any cloud account.
+- **Reproducible by anyone:** the same build scripts (`firmware/toolchain/`) and the same pinned
+  Guix channel run on any Linux machine; the tool that drives the cloud machine is written for
+  one provider and the owner's setup.
 - **A record, not a claim:** every step, version and hash goes into an audit log, committed and
   signed on the machine, published in a public repository.
 
