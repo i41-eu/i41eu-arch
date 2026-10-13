@@ -136,15 +136,15 @@ Each item: what, where, why it matters, and what would fix it.
 
 - **What:** a phone signs in to the home manager by scanning the code on a robot's Manager screen.
   The manager never ends that sign-in: only the phone signing out does (its cookie lasts a year).
-  It has the owner's rights, including setting robots up again, and the page cannot list or sign
-  out phones.
+  It has the owner's rights over the robots (since i41eu-manager v0.1.1 not the setup and not the
+  link, §5), and the page cannot list or sign out phones.
 - **Where:** [i41eu-manager](https://github.com/i41-eu/i41eu-manager) (`internal/manager`: the
   phone sessions and the owner check).
 - **Why it matters:** anyone who once signed in at a robot (a visitor, a babysitter), or got a code
   or a cookie (§4.5), stays the owner until the manager's state is reset; a lost phone stays signed
   in.
 - **Fix:** phone sign-ins that expire, a list of them on the computer's page with Remove, each tied
-  to the robot it signed in at, and setting robots up only from the computer itself.
+  to the robot it signed in at.
 
 ### 4.7 End-to-end encryption: what it does not cover yet
 
@@ -247,6 +247,7 @@ Each item: what, where, why it matters, and what would fix it.
 
 | Date | What was wrong | Where | Fixed in |
 |---|---|---|---|
+| 2026-10-13 | A phone signed in at a robot could set robots up again (getting their tokens) and start, change or end the home's link to m.i41.eu; now only the page on the computer the manager runs on can | the home manager | [i41eu-manager](https://github.com/i41-eu/i41eu-manager) v0.1.1 |
 | 2026-10-13 | The home manager gave the computer's Wi-Fi password to phones signed in at a robot; now only the page on the computer itself gets it | the home manager | [i41eu-manager](https://github.com/i41-eu/i41eu-manager) v0.1.0. m.i41.eu was not affected |
 
 ## 6. Reporting
